@@ -1,13 +1,21 @@
+# 🚀 Mi Journey Técnico - De Windows Server a Azure Security
+
+## 👋 Sobre Mí
+Estudiante de ASIR especializándome en Seguridad Cloud...
+
+## 🗺️ Roadmap
+### **🏗️ FASE 1: Windows Server** 
+- [x] Active Directory, DNS, DHCP
+- [ ] Hyper-V, PowerShell
+
+### **☁️ FASE 2: Azure**
+- [ ] AZ-900 Fundamentals
+- [ ] AZ-104 Administrator
+
+## 📚 Documentación
+- [Active Directory](/windows-server/active-directory)
+- [Azure Guides](/azure/)
+- [Scripts PowerShell](/powershell/)
+
 ---
-layout: default
-title: Mi Página Web
----
-
-# ¡Bienvenido a mi sitio!
-
-Este es un párrafo de texto en **markdown**.
-
-* Elemento de lista 1
-* Elemento de lista 2
-
-[Visita Google](https://www.google.com)
+[📧 Contacto](mailto:tu@email.com)

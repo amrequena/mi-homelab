@@ -1,12 +1,23 @@
-### Promote WS to domain controler
+# Configuración de Controlador de Dominio con PowerShell
 
-## PowerShell method
+## Método
+Usamos PowerShell para promover Windows Server porque:
+- Asegura consistencia
+- Permite automatización
+- Proporciona documentación completa
+- Escala fácilmente
 
-We are going to use PowerShell to promote our Windows Server because because it ensures consistency, enables automation, provides complete documentation of the process, and scales effortlessly from single servers to enterprise-wide deployments. 
+## Comandos PowerShell
 
-##Steps
-
-#1. <Instalar rol Active Directory>
 ```powershell
+# Instalar características de Active Directory
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
-```powershell
+
+# Promover servidor a controlador de dominio
+Install-ADDSDomainController -DomainName "tu-dominio.com" -InstallDns
+```
+
+## Configuración
+- Dominio: Controlador de dominio remoto
+- Constantes: Active Directory
+- Herramientas: PowerShell

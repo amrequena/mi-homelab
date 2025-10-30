@@ -1,1 +1,12 @@
+### Promote WS to domain controler
 
+## PowerShell method
+
+We are going to use PowerShell to promote our Windows Server because because it ensures consistency, enables automation, provides complete documentation of the process, and scales effortlessly from single servers to enterprise-wide deployments. 
+
+##Steps
+
+#1. <Instalar rol Active Directory>
+```powershell
+Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
+```powershell

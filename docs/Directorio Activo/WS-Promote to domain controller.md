@@ -2,10 +2,10 @@
 
 ## Método
 Usamos PowerShell para promover Windows Server porque:
-- Asegura consistencia
-- Permite automatización
-- Proporciona documentación completa
-- Escala fácilmente
+- Asegura consistencia.
+- Permite automatización.
+- Proporciona documentación completa.
+- Escala fácilmente.
 
 ## Comandos PowerShell
 

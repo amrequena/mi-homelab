@@ -29,17 +29,16 @@ Get-NetIPConfiguration
 ```
 
 ## Promover el servidor a controlador de dominio
-
+Instalar características de Active Directory
 ```powershell
-# Instalar características de Active Directory
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```
+Promover servidor a controlador de dominio
 ```powershell
-# Promover servidor a controlador de dominio
 Install-ADDSDomainController -DomainName "tu-dominio.com" -InstallDns
 ```
+Comprobar que está en el dominio
 ```powershell
-# Comprobar que está en el dominio
 Get-CimInstance Win32_ComputerSystem | Select-Object Name, Domain, PartOfDomain
 ```
 

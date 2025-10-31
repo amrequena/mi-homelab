@@ -16,10 +16,13 @@ Usamos PowerShell para promover Windows Server porque:
 Debemos configurar una IP estática. 
 
 ```powershell
+
 # Configurar IP
 New-NetIPAddress -IPAddress "10.0.2.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "10.0.0.2"
+
 # Configurar DNS (apuntar a sí mismo)
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "192.168.1.10"
+
 # Ver IP configurada
 Get-NetIPAddress
 ```
@@ -27,6 +30,7 @@ Get-NetIPAddress
 ## Promover el servidor a controlador de dominio
 
 ```powershell
+
 # Instalar características de Active Directory
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 

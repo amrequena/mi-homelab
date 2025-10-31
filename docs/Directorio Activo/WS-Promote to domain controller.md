@@ -23,7 +23,7 @@ New-NetIPAddress -IPAddress "10.0.2.10" -PrefixLength 24 -InterfaceAlias "Ethern
 ````
 ```powershell
 # Configurar DNS (apuntar a sí mismo)
-Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "10.0.2.2"
+Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "10.0.2.10"
 ````
 ```powershell
 # Ver IP configurada

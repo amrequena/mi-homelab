@@ -35,7 +35,7 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```
 Promover servidor a controlador de dominio
 ```powershell
-Install-ADDSDomainController -DomainName "tu-dominio.com" -InstallDns
+Install-ADDSDomainController -DomainName "homelab.com" -DomainNetbiosName "HOMELAB" -InstallDns
 ```
 Comprobar que está en el dominio
 ```powershell

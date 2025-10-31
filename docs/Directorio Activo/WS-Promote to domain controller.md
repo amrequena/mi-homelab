@@ -17,19 +17,11 @@ Debemos configurar una IP estática.
 
 ```powershell
 # Configurar IP
-New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -DefaultGateway "192.168.1.1" -InterfaceAlias "Ethernet"
-
+New-NetIPAddress -IPAddress "10.0.2.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "10.0.0.2"
 # Configurar DNS (apuntar a sí mismo)
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "192.168.1.10"
-
 # Ver IP configurada
 Get-NetIPAddress
-
-# Ver DNS configurado
-Get-DnsClientServerAddress
-
-# Ver configuración completa
-ipconfig /all
 ```
 
 ## Promover el servidor a controlador de dominio

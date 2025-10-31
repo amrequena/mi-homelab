@@ -38,6 +38,8 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
 # Promover servidor a controlador de dominio
 Install-ADDSDomainController -DomainName "tu-dominio.com" -InstallDns
-```
 
+# Comprobar que está en el dominio
+Get-CimInstance Win32_ComputerSystem | Select-Object Name, Domain, PartOfDomain
+```
 

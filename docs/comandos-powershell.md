@@ -2,7 +2,7 @@
 
 ## Comandos de administración 
 
-### Cambiar Hostname y Reiniciar
+### Cambiar hostname y reiniciar
 ```powershell
 Rename-Computer -NewName "NUEVO-NOMBRE" -Restart 
 ```

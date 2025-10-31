@@ -8,6 +8,8 @@ Usamos PowerShell para promover Windows Server porque:
 - Escala fácilmente.
 
 ## Inventario
+- VirtualBox
+- Red NAT
 - Windows Server 22
 
 ## Requisitos previos

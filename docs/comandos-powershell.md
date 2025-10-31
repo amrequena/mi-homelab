@@ -14,4 +14,17 @@ Rename-Computer -NewName "NUEVO-NOMBRE"
 ```powershell
 Rename-Computer -NewName "NUEVO-NOMBRE" -Restart 
 ```
+## Comandos de red
 
+### Ver IP
+```powershell
+Get-NetIPConfiguration
+```
+### Probar si tienes internet
+```powershell
+Test-Connection google.com
+```
+### Ver adaptadores de red
+```powershell
+Get-NetAdapter
+```

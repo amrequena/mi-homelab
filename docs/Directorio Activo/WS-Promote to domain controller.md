@@ -27,7 +27,7 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "10.0.2.2
 ````
 ```powershell
 # Ver IP configurada
-Get-NetIPAddress
+Get-NetIPConfiguration
 ```
 
 ## Promover el servidor a controlador de dominio

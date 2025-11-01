@@ -13,7 +13,7 @@ Usamos PowerShell para promover Windows Server porque:
 ### Configurar red
 Debemos configurar una IP estática. 
 ```powershell
-New-NetIPAddress -IPAddress "10.0.2.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "10.0.2.2"
+New-NetIPAddress -IPAddress "10.0.2.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "10.0.2.1"
 ````
 Configurar DNS (apuntar a sí mismo)
 ```powershell

@@ -1,12 +1,16 @@
 # Configuración de Controlador de dominio con PowerShell
 
-## Requisitos previos
-
-### Configurar red
-Debemos configurar una IP estática. 
+## Requisitos previos.
+1. Ser administrador
+2. Tener una IP estática
 ```powershell
 New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "192.168.1.1"
 ````
+Ver IP configurada
+```powershell
+Get-NetIPConfiguration
+```
+3. Configurar el DNS
 Configurar DNS (apuntar a sí mismo)
 ```powershell
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "192.168.1.10"

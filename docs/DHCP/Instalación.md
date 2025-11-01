@@ -16,5 +16,11 @@ Install-WindowsFeauture DHCP -IncludeManagementTools
 ```powershell
 Get-Service DHCPServer
 ```
-
-
+### Autorizar servidor DHCP en AD
+```powershell
+Add-DhcpServerInDC -DnsName "DC1"
+```
+### Verificar que está autorizado
+```powershell
+Get-DhcpServerInDC
+```

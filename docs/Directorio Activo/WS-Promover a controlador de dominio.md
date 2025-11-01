@@ -8,7 +8,7 @@ New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -InterfaceAlias "Eth
 ````
    2.1. Ver IP configurada
 ```powershell
-Get-NetIPConfiguration
+ipconfig
 ```
 3. Configurar el DNS
 Configurar DNS (apuntar a sí mismo)

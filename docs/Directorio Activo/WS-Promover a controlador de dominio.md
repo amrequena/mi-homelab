@@ -1,16 +1,12 @@
 # Configuración de Controlador de dominio con PowerShell
 
 ## Método
+
 Usamos PowerShell para promover Windows Server porque:
 - Asegura consistencia.
 - Permite automatización.
 - Proporciona documentación completa.
 - Escala fácilmente.
-
-## Inventario
-- VirtualBox
-- Red NAT
-- Windows Server 22
 
 ## Requisitos previos
 
@@ -41,7 +37,7 @@ Install-ADDSForest `
     -InstallDns 
     -SafeModeAdministratorPassword (ConvertTo-SecureString "TuPassword123!" -AsPlainText -Force) 
     -Force
-````
+```
 Comprobar que es controlador de dominio
 ```powershell
 Get-ADDomainController

@@ -6,7 +6,7 @@
 ```powershell
 New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "192.168.1.1"
 ````
-2.1. Ver IP configurada
+    2.1. Ver IP configurada
 ```powershell
 Get-NetIPConfiguration
 ```

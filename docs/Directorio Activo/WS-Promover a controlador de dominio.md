@@ -6,16 +6,13 @@
 ```powershell
 New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "192.168.1.1"
 ````
-   2.1. Ver IP configurada
-```powershell
-ipconfig
-```
 3. Configurar el DNS
 Configurar DNS (apuntar a sí mismo)
 ```powershell
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "192.168.1.10"
+Get-NetIPConfiguration
 ````
-   3.1. Ver IP configurada
+4. Ver IP configurada
 ```powershell
 Get-NetIPConfiguration
 ```

@@ -36,14 +36,21 @@ Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 Crear el bosque/dominio
 ```powershell
 Install-ADDSForest `
-    -DomainName "home.lab" 
+    -DomainName "homelab.com" 
     -DomainNetbiosName "HOMELAB" 
     -InstallDns 
     -SafeModeAdministratorPassword (ConvertTo-SecureString "TuPassword123!" -AsPlainText -Force) 
     -Force
 ````
-Comprobar que está en el dominio
+Comprobar que es controlador de dominio
 ```powershell
-Get-CimInstance Win32_ComputerSystem | Select-Object Name, Domain, PartOfDomain
+Get-ADDomainController
 ```
+Verificar información del dominio
+```powershell
+Get-ADDomain
+```
+
+
+
 

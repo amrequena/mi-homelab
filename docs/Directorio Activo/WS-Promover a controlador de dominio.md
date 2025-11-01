@@ -42,10 +42,6 @@ Install-ADDSForest `
     -SafeModeAdministratorPassword (ConvertTo-SecureString "TuPassword123!" -AsPlainText -Force) 
     -Force
 ````
-Promover servidor a controlador de dominio
-```powershell
-Install-ADDSDomainController -DomainName "home.lab" -DomainNetbiosName "HOMELAB" -InstallDns
-```
 Comprobar que está en el dominio
 ```powershell
 Get-CimInstance Win32_ComputerSystem | Select-Object Name, Domain, PartOfDomain

@@ -5,24 +5,21 @@
 2. Tener una IP estática
 ```powershell
 New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "192.168.1.1"
+## Comprobar la configuración
+Get-NetIPConfiguration
 ````
 3. Configurar el DNS
 Configurar DNS (apuntar a sí mismo)
 ```powershell
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "192.168.1.10"
+## Comprobar la configuración
 Get-NetIPConfiguration
 ````
-4. Ver IP configurada
-```powershell
-Get-NetIPConfiguration
-```
-
 ## Instalación
 Instalar características de Active Directory
 ```powershell
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```
-
 ## Configuración
 Crear el bosque/dominio
 ```powershell

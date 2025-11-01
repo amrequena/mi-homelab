@@ -33,10 +33,19 @@ Instalar características de Active Directory
 ```powershell
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```
+Crear el bosque/dominio
+```powershell
+Install-ADDSForest `
+    -DomainName "home.lab" 
+    -DomainNetbiosName "HOMELAB" 
+    -InstallDns 
+    -SafeModeAdministratorPassword (ConvertTo-SecureString "TuPassword123!" -AsPlainText -Force) 
+    -Force
+````
 Promover servidor a controlador de dominio
 ```powershell
 Install-ADDSDomainController -DomainName "homelab.com" -DomainNetbiosName "HOMELAB" -InstallDns
-```
+```que 
 Comprobar que está en el dominio
 ```powershell
 Get-CimInstance Win32_ComputerSystem | Select-Object Name, Domain, PartOfDomain

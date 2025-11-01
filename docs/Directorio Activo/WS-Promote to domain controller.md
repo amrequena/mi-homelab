@@ -44,7 +44,7 @@ Install-ADDSForest `
 ````
 Promover servidor a controlador de dominio
 ```powershell
-Install-ADDSDomainController -DomainName "homelab.com" -DomainNetbiosName "HOMELAB" -InstallDns
+Install-ADDSDomainController -DomainName "home.lab" -DomainNetbiosName "HOMELAB" -InstallDns
 ```
 Comprobar que está en el dominio
 ```powershell

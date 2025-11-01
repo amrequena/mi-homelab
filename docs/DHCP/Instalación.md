@@ -16,9 +16,9 @@ Install-WindowsFeauture DHCP -IncludeManagementTools
 ```powershell
 Get-Service DHCPServer
 ```
-### Autorizar servidor DHCP en AD
+### Autorizar servidor DHCP en AD con las credenciales del administrador
 ```powershell
-Add-DhcpServerInDC -DnsName "DC1"
+Add-DhcpServerInDC -DnsName "DCI" -Credential (Get-Credential "HOMELAB\Administrador")
 ```
 ### Verificar que está autorizado
 ```powershell

@@ -24,11 +24,13 @@ Ver IP configurada
 Get-NetIPConfiguration
 ```
 
-## Promover el servidor a controlador de dominio
+## Instalación
 Instalar características de Active Directory
 ```powershell
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 ```
+
+## Configuración
 Crear el bosque/dominio
 ```powershell
 Install-ADDSForest 

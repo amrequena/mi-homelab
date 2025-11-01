@@ -2,7 +2,10 @@
 
 ## Requisitos
 1. Tener IP estática
-2. Ser administrador
+```powershell
+New-NetIPAddress -IPAddress "192.168.1.10" -PrefixLength 24 -InterfaceAlias "Ethernet" -DefaultGateway "192.168.1.1"
+````
+3. Ser administrador
 
 ## Instalación 
 

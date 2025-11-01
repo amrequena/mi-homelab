@@ -18,9 +18,10 @@ Get-Service DHCPServer
 ```
 ### Autorizar servidor DHCP en AD con las credenciales del administrador
 ```powershell
-Add-DhcpServerInDC -DnsName "DCI" -Credential (Get-Credential "HOMELAB\Administrador")
+Add-DhcpServerInDC -DnsName "DCI" 
 ```
 ### Verificar que está autorizado
 ```powershell
 Get-DhcpServerInDC
 ```
+Omite la instalación posterior desde la GUI. 

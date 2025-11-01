@@ -1,13 +1,5 @@
 # Configuración de Controlador de dominio con PowerShell
 
-## Método
-
-Usamos PowerShell para promover Windows Server porque:
-- Asegura consistencia.
-- Permite automatización.
-- Proporciona documentación completa.
-- Escala fácilmente.
-
 ## Requisitos previos
 
 ### Configurar red

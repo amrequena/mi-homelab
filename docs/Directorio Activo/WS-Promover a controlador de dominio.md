@@ -1,6 +1,6 @@
 # Configuración de Controlador de dominio con PowerShell
 
-## Requisitos previos.
+## Requisitos
 1. Ser administrador
 2. Tener una IP estática
 ```powershell

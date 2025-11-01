@@ -3,6 +3,9 @@
 ## Requisitos
 
 ## Instalación 
-powershell
+```powershell
+Install-WindowsFeauture DHCP -IncludeManagementTools
+``` 
+
 
 

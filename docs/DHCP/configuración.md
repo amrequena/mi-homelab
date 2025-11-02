@@ -18,7 +18,7 @@ Add-DhcpServerV4Scope -Name "Red Homelab" -StartRange 192.168.1.100 -EndRange 19
 ```
 ### Configurar la puerta de enlace del ámbito
 ```powershell
-Get-Service DHCPServer
+Set-DhcpServerV4OptionValue -ScopeId 192.168.1.0 -Router 192.168.1.1
 ```
 ### Configurar el servidor DNS
 ```powershell

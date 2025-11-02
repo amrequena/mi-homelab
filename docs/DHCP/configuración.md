@@ -16,11 +16,19 @@ Get-DhcpServerInDC
 ```powershell
 Add-DhcpServerV4Scope -Name "Red Homelab" -StartRange 192.168.1.100 -EndRange 192.168.1.200 -SubnetMask 255.255.255.0
 ```
-### Configurar la puerta de enlace de los clientes
+### Configurar la puerta de enlace del ámbito
 ```powershell
 Get-Service DHCPServer
 ```
-### Crear el ámbito principal
+### Configurar el servidor DNS
 ```powershell
-Get-Service DHCPServer
+Set-DhcpServerV4OptionValue -ScopeId 192.168.1.0 -DnsServer 192.168.1.10
+```
+### Configurar el dominio
+```powershell
+Set-DhcpServerV4OptionValue -ScopeId 192.168.1.0 -DnsDomain "homelab.com"
+```
+### Crear una reserva para impresoras
+```powershell
+Add-DhcpServerV4Reservation -ScopeId 192.168.1.0 -IPAddress 192.168.1.50 -ClientId "AA-BB-CC-DD-EE-FF" -Name "ImpresoraHP"
 ```

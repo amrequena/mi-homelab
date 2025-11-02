@@ -3,7 +3,10 @@
 ## Requisitos 
 1. Ser administrador
 2. Tener DHCP instalado
-3. Usar el servidor autorizado.
+```powershell
+Get-Service DHCPServer
+```
+4. Usar el servidor autorizado.
 ``` powershell
 Get-DhcpServerInDC
 ```
